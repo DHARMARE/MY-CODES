@@ -1,0 +1,34 @@
+#include"stdio.h"
+main()
+{
+    int a[4][4],i,j,temp;
+    for(i=0;i<=3;i++)
+    {
+        for(j=0;j<=3;j++)
+        {
+            printf("Enter the element");
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<=3;i++)
+    {
+        for(j=0;j<=3;j++)
+        {
+            if(j>1)
+            {
+                temp=a[i][j];
+                a[i][j]=a[j][i];
+                a[j][i]=temp;
+            }
+        }
+    }
+    for(i=0;i<=3;i++)
+    {
+        for(j=0;j<=3;j++)
+        {
+            printf("%d",a[i][j]);
+        }
+        printf("\n");
+    }
+    getch();
+}
